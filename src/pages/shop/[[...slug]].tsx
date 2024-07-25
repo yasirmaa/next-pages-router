@@ -5,7 +5,12 @@ const ShopPage = () => {
   const router = useRouter();
   console.log(router.query);
 
-  return <div>Shop Page</div>;
+  return (
+    <div>
+      <h1>Shop Page</h1>
+      <p>Slug: {router.query.slug}</p>
+    </div>
+  );
 };
 
 export default ShopPage;
