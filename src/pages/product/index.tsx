@@ -1,18 +1,7 @@
-import { CardsSkeleton } from '@/components/elements/skeleton';
-import { inter, lusitana } from '@/lib/fonts/fonts';
 import fetcher from '@/lib/swr/fetcher';
 import ProductView from '@/views/product';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
-
-type Product = {
-  id: string;
-  name: string;
-  price: number;
-  colour: number;
-  imageUrl: string;
-  category: string;
-};
 
 const ProductPage = () => {
   const [products, setProducts] = useState<Product[]>([]);

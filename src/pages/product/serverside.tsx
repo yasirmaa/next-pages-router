@@ -1,14 +1,4 @@
 import ProductView from '@/views/product';
-import exp from 'constants';
-
-type Product = {
-  id: string;
-  name: string;
-  price: number;
-  colour: number;
-  imageUrl: string;
-  category: string;
-};
 
 const ProductPage = (props: { products: Product[] }) => {
   const { products } = props;
