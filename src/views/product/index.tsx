@@ -31,8 +31,8 @@ const ProductView = ({ products }: { products: Product[] }) => {
                   src={product.imageUrl}
                   className="hidden md:block w-full"
                   alt={product.name}
-                  width={100}
-                  height={100}
+                  width={500}
+                  height={500}
                 />
                 <div className="product-description">
                   <div className={`${inter.className} product-card__title font-semibold`}>

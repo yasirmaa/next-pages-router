@@ -1,12 +1,15 @@
 import { inter } from '@/lib/fonts/fonts';
+import Image from 'next/image';
 
 const ProductDetail = ({ product }: { product: Product }) => {
   return (
     <div className="product-card__body w-1/3 m-auto">
-      <img
+      <Image
         src={product.imageUrl ?? product.imageUrl}
         className="hidden md:block w-full"
         alt={product.name}
+        width={500}
+        height={500}
       />
       <div className="product-description">
         <div className={`${inter.className} product-card__title font-semibold`}>{product.name}</div>

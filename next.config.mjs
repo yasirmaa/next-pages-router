@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'static.niki.com',
+        hostname: 'static.nike.com',
         port: '',
         pathname: '/**',
       },
