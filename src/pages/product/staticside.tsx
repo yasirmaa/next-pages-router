@@ -12,7 +12,13 @@ export async function getStaticProps() {
       throw new Error(`Failed to fetch: ${res.statusText}`);
     }
     const data = await res.json();
-    return { props: { products: data.data } };
+    return {
+      props: {
+        products: data.data,
+      },
+      // Incremental Static Regeneration
+      // revalidate: 10,
+    };
   } catch (error) {
     console.error('Error fetching products:', error);
     return { props: { products: [] } }; // Return an empty array or handle the error as needed

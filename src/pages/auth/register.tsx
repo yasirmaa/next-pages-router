@@ -1,13 +1,11 @@
-import Link from 'next/link';
+import RegisterForm from '@/components/fragments/RegisterForm';
+import AuthLayout from '@/components/layouts/AuthLayout/AuthLayout';
 
 const RegisterPage = () => {
   return (
-    <div>
-      <h1>Register</h1>
-      <p>
-        Already have an account? <Link href="/auth/login">login</Link>.
-      </p>
-    </div>
+    <AuthLayout title={'Register'}>
+      <RegisterForm />
+    </AuthLayout>
   );
 };
 

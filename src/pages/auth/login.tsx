@@ -1,10 +1,11 @@
-import LoginView from '@/views/auth/login';
+import LoginForm from '@/components/fragments/LoginForm';
+import AuthLayout from '@/components/layouts/AuthLayout/AuthLayout';
 
 const LoginPage = () => {
   return (
-    <>
-      <LoginView />
-    </>
+    <AuthLayout title={'Login'}>
+      <LoginForm />
+    </AuthLayout>
   );
 };
 

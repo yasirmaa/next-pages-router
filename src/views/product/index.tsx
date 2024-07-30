@@ -1,5 +1,6 @@
 import { CardsSkeleton } from '@/components/elements/skeleton';
 import { inter, lusitana } from '@/lib/fonts/fonts';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -26,7 +27,13 @@ const ProductView = ({ products }: { products: Product[] }) => {
           products.map((product) => (
             <div key={product.id} className="product-card product-grid__card">
               <Link href={`/product/${product.id}`} className="product-card__body">
-                <img src={product.imageUrl} className="hidden md:block w-full" alt={product.name} />
+                <Image
+                  src={product.imageUrl}
+                  className="hidden md:block w-full"
+                  alt={product.name}
+                  width={100}
+                  height={100}
+                />
                 <div className="product-description">
                   <div className={`${inter.className} product-card__title font-semibold`}>
                     {product.name}
