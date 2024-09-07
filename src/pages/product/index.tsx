@@ -1,15 +1,12 @@
 import fetcher from '@/lib/swr/fetcher';
 import ProductView from '@/views/product';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import useSWR from 'swr';
 
 const ProductPage = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  // const [products, setProducts] = useState<Product[]>([]);
 
-  const { data, error, isLoading } = useSWR('http://localhost:3000/api/product', fetcher);
-  console.log(data);
-  console.log(error);
-  console.log(isLoading);
+  const { data, isLoading } = useSWR('http://localhost:3000/api/product', fetcher);
 
   // useEffect(() => {
   //   fetch('http://localhost:3000/api/product')
@@ -23,7 +20,7 @@ const ProductPage = () => {
   //     });
   // }, []);
 
-  return <ProductView products={isLoading ? [] : data.data} />;
+  return <ProductView products={isLoading ? [] : data?.data} />;
 };
 
 export default ProductPage;

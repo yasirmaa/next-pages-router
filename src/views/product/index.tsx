@@ -17,14 +17,14 @@ const ProductView = ({ products }: { products: Product[] }) => {
   return (
     <div className="w-full px-20">
       <h1 className={`${lusitana.className} text-3xl font-semibold`}>Product Page</h1>
-      {products.length === 0 && (
+      {products?.length === 0 && (
         <div>
           <CardsSkeleton />
         </div>
       )}
       <div className="product-grid__items grid grid-cols-4 gap-5">
-        {products.length > 0 &&
-          products.map((product) => (
+        {products?.length > 0 &&
+          products?.map((product) => (
             <div key={product.id} className="product-card product-grid__card">
               <Link href={`/product/${product.id}`} className="product-card__body">
                 <Image

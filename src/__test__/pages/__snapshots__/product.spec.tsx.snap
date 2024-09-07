@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Page render product page 1`] = `
+<div>
+  <div
+    class="w-full px-20"
+  >
+    <h1
+      class="className text-3xl font-semibold"
+    >
+      Product Page
+    </h1>
+    <div
+      class="product-grid__items grid grid-cols-4 gap-5"
+    />
+  </div>
+</div>
+`;
